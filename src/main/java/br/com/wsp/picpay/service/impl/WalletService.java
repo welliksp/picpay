@@ -3,6 +3,7 @@ package br.com.wsp.picpay.service.impl;
 import br.com.wsp.picpay.dto.WalletRequest;
 import br.com.wsp.picpay.dto.WalletResponse;
 import br.com.wsp.picpay.entity.Wallet;
+import br.com.wsp.picpay.exception.WalletAlredyExistsException;
 import br.com.wsp.picpay.repository.WalletRepository;
 import br.com.wsp.picpay.service.IWalletService;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class WalletService implements IWalletService {
 
         repository.findByCpfCnpjOrEmail(walletRequest.cpfCnpj(), walletRequest.email())
                 .ifPresent(wallet -> {
-                    throw new IllegalArgumentException("Wallet already exists with the same CPF/CNPJ or email");
+                    throw new WalletAlredyExistsException("Wallet already exists with the same CPF/CNPJ or email");
                 });
 
         Wallet walletSaved = repository.save(walletRequest.toWallet());
