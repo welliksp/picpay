@@ -36,4 +36,12 @@ public class Wallet implements Serializable {
     @JoinColumn(name = "wallet_type_id")
     private WalletType walletType;
 
+
+    public Wallet(String fullName, String cpfCnpj, String email, String password, WalletType walletType) {
+        this.fullName = fullName;
+        this.cpfCnpj = cpfCnpj;
+        this.email = email;
+        this.password = password;
+        this.walletType = walletType;
+    }
 }
