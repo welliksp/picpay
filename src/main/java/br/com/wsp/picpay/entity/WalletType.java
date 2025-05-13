@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Builder
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class WalletType implements Serializable {

@@ -19,3 +19,6 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+client:
+  notification-service: https://run.mocky.io/v3/5ca10f49-e528-4d7b-9844-1c92e412c4b2
+  authorization-service: https://run.mocky.io/v3/42905a90-5760-4143-8690-7401f84c41e6

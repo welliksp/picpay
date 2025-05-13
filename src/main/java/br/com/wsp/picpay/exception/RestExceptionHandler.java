@@ -1,7 +1,6 @@
-package br.com.wsp.picpay.controller;
+package br.com.wsp.picpay.exception;
 
 import br.com.wsp.picpay.dto.InvalidParam;
-import br.com.wsp.picpay.exception.PicPayException;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
